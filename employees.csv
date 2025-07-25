@@ -1,0 +1,12 @@
+Id,firstName,lastName,salary,managerId
+123,Joe,Doe,60000,
+124,Martin,Chekov,45000,123
+125,Bob,Ronstad,47000,123
+300,Alice,Hasacat,50000,124
+305,Brett,Hardleaf,34000,300
+700,Manager,Level1,80000,123
+701,Manager,Level2,70000,700
+702,Manager,Level3,60000,701
+703,Manager,Level4,50000,702
+704,Employee,Deep,40000,703
+705,Employee,TooDeep,30000,704
