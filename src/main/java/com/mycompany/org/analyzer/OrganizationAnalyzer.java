@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 /**
  * Analyzes the organizational structure for salary discrepancies and long reporting lines.
  */
-public class OrganizationAnalyzer {
+public class OrganizationAnalyzer implements OrganizationAnalyzerInterface {
 
     private final Map<Integer, Employee> employeesById;
     private final Map<Integer, List<Employee>> subordinatesByManagerId;
@@ -53,6 +53,7 @@ public class OrganizationAnalyzer {
      * Analyzes manager salaries to identify those earning less or more than they should.
      * Prints the results to the console.
      */
+    @Override
     public void analyzeManagerSalaries() {
         System.out.println("\n--- Manager Salary Analysis ---");
         DecimalFormat df = new DecimalFormat("#.##"); // For formatting currency differences
@@ -107,6 +108,7 @@ public class OrganizationAnalyzer {
      * Analyzes reporting lines to identify employees with too many managers between them and the CEO.
      * Prints the results to the console.
      */
+    @Override
     public void analyzeReportingLines() {
         System.out.println("\n--- Reporting Line Analysis ---");
         boolean foundLongLine = false;
